@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* HEADER */
+.main-header {
+  background-color: #000;
+  border-radius: 1px solid #333;
+  padding: 16px 40px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+/* LOGO */
+.logo {
+  height: 40px;
+}
+/* CENTER-MENU */
+.main-nav {
+  display: flex;
+  gap: 24px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: .5px;
+}
+.main-nav a:hover {
+  color: #ff6f00;
+}
+/* RIGHT-UTILL_MENU */
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #bbb;
+  font-size: 14px;
+}
+.right-nav a {
+  color: #aaa;
+  text-decoration: none;
+}
+.lang-box {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #888;
+}
+/* MAIN_VISUAL */
+.main-visual {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1;
+}
+.dropdown-wrapper {
+  position: relative;
+}
+.drop-down-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  padding: 12px 16px;
+  border-top: 1px solid #444;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  z-index: 1000;
+  min-width: 200px;
+  white-space: nowrap;
+}
+.drop-down-menu a {
+  color: #ccc;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 4px 8px;
+  font-weight: 600;
+}
+.main-nav a,
+.drop-down-menu a {
+  transition: color .2s ease;
+}
+.drop-down-menu a:hover {
+  color: orange;
+}
+.dropdown-wrapper:hover .drop-down-menu {
+  display: flex;
+}
+
+/* 햄버거 메뉴 기본 숨김 (PC) */
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+/* 모바일 환경 */
+@media screen and (max-width: 768px) {
+  .main-nav,
+  .right-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    padding: 16px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .main-nav.show,
+  .right-nav.show {
+    display: flex;
+  }
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
