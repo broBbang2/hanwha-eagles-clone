@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./js/main.js">
-  <title>Document</title>
+  <link rel="icon" href="./img/h_logo.png">
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link defer rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/main.js"></script>
+  <title>Eagles</title>
 </head>
 <body>
   <header class="main-header">
@@ -55,5 +63,75 @@
     <div class="overlay-text">WE ARE THE EAGLES</div>
   </section>
 
+  <!-- 경기 일정 슬라이더 -->
+   <section class="match-section">
+    <h2 class="match-title">UPCOMING!</h2>
+    <div class="swiper match-swiper">
+      <div class="swiper-wrapper">
+        <!-- SLide1 -->
+         <div class="swiper-slide match-card">
+          <div class="match-meta">
+            <div class="match-place">대전(신)</div>
+            <div class="match-date">2025.06.05 (목)</div>
+            <div class="match-time">18:30</div>
+          </div>
+          <div class="match-logos">
+            <img src="./img/wiz.png" alt="KT wiz" class="team-logo">
+            <span class="vs">vs</span>
+            <img src="./img/eagles.png" alt="Eagles" class="team-logo">
+          </div>
+         </div>
+         <div class="swiper-slide match-card">
+          <div class="match-meta">
+            <div class="match-place">광주</div>
+            <div class="match-date">2025.06.06 (금)</div>
+            <div class="match-time">17:00</div>
+          </div>
+          <div class="match-logos">
+            <img src="./img/eagles.png" alt="Eagles" class="team-logo">
+            <span class="vs">vs</span>
+            <img src="./img/tigers.png" alt="Tigers" class="team-logo">
+          </div>
+          </div>
+          <div class="swiper-slide match-card">
+            <div class="match-meta">
+              <div class="match-place">광주</div>
+              <div class="match-date">2025.06.07 (토)</div>
+              <div class="match-time">17:00</div>
+            </div>
+            <div class="match-logos">
+              <img src="./img/eagles.png" alt="Eagles" class="team-logo">
+              <span class="vs">vs</span>
+              <img src="./img/tigers.png" alt="Tigers" class="team-logo">
+            </div>
+          </div>
+          <div class="swiper-slide match-card">
+            <div class="match-meta">
+              <div class="match-place">광주</div>
+              <div class="match-date">2025.06.08 (일)</div>
+              <div class="match-time">17:00</div>
+            </div>
+            <div class="match-logos">
+              <img src="./img/eagles.png" alt="Eagles" class="team-logo">
+              <span class="vs">vs</span>
+              <img src="./img/tigers.png" alt="Tigers" class="team-logo">
+            </div>
+          </div>
+          <div class="swiper-slide match-card">
+            <div class="match-meta">
+              <div class="match-place">대전(신)</div>
+              <div class="match-date">2025.06.10 (화)</div>
+              <div class="match-time">17:00</div>
+            </div>
+            <div class="match-logos">
+              <img src="./img/eagles.png" alt="Eagles" class="team-logo">
+              <span class="vs">vs</span>
+              <img src="./img/Bears.png" alt="Bears" class="team-logo">
+            </div>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+   </section>
 </body>
 </html>
